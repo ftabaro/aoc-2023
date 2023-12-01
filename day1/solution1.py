@@ -17,11 +17,13 @@ def main(path: str) -> int:
                 if char.isnumeric():
                     n += char
                     break
-                
+
             numbers.append(int(n))
-    return(sum(numbers))
+    return sum(numbers)
+
 
 if __name__ == "__main__":
     import sys
+
     res = main(sys.argv[1])
     print(res)

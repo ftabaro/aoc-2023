@@ -21,6 +21,7 @@ def test_day1_sol1():
     solution = d1s1(test_files["day1p1"])
     assert solution == 142
 
+
 def test_day1_sol2():
     solution = d1s2(test_files["day1p2"])
     assert solution == 281
