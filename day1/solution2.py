@@ -1,6 +1,6 @@
 def main(path: str) -> int:
     """
-    Day 1 solution to part 1
+    Day 1 solution to part 2
     """
 
     lookup = {
