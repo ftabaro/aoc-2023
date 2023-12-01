@@ -28,11 +28,10 @@ def main(path: str) -> int:
                     numbers_in_line.append(line[i])
                     continue
                 for j in [2, 3, 4, 5]:
-                    if j < len(line):
-                        w = line[i : i + j]
-                        if w in lookup:
-                            numbers_in_line.append(str(lookup[w]))
-                            break
+                    w = line[i : i + j]
+                    if w in lookup:
+                        numbers_in_line.append(str(lookup[w]))
+                        break
             numbers.append(int(numbers_in_line[0] + numbers_in_line[-1]))
 
     return sum(numbers)
