@@ -1,5 +1,6 @@
 import math
 
+
 def main(path: str) -> int:
     """
     Day 2 solution to part 1
@@ -13,12 +14,8 @@ def main(path: str) -> int:
         for i, line in enumerate(file_handler):
             line = line.strip()
             game_id, game_record = line.split(": ")
-            
-            ncubes = {
-                "red": -math.inf,
-                "green": -math.inf,
-                "blue": -math.inf
-            }
+
+            ncubes = {"red": -math.inf, "green": -math.inf, "blue": -math.inf}
 
             for sampling in game_record.split("; "):
                 for s in sampling.split(", "):
@@ -26,14 +23,15 @@ def main(path: str) -> int:
                     sampled_cubes = int(sampled_cubes)
                     if sampled_cubes > ncubes[cubes_color]:
                         ncubes[cubes_color] = sampled_cubes
-                    
+
             game_power = 1
             for n in ncubes.values():
                 game_power *= n
-            
+
             tot += game_power
-                
-    return(tot)
+
+    return tot
+
 
 if __name__ == "__main__":
     import sys

@@ -8,17 +8,13 @@ def main(path: str) -> int:
 
     games = []
 
-    ncubes = {
-        "red": 12,
-        "green": 13,
-        "blue": 14
-    }
+    ncubes = {"red": 12, "green": 13, "blue": 14}
 
     with open(path, encoding="utf-8") as file_handler:
         for i, line in enumerate(file_handler):
             line = line.strip()
             game_id, game_record = line.split(": ")
-            
+
             valid_game = True
             for sampling in game_record.split("; "):
                 for s in sampling.split(", "):
@@ -28,11 +24,12 @@ def main(path: str) -> int:
                         break
             # if not valid_game:
             #     break
-            
+
             if valid_game:
-                games.append(i+1)
-                
-    return(sum(games))
+                games.append(i + 1)
+
+    return sum(games)
+
 
 if __name__ == "__main__":
     import sys
