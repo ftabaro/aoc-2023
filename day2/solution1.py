@@ -19,8 +19,6 @@ def main(path: str) -> int:
                     if int(sampled_cubes) > ncubes[cubes_color]:
                         valid_game = False
                         break
-            # if not valid_game:
-            #     break
 
             if valid_game:
                 games.append(i + 1)
