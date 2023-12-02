@@ -25,3 +25,17 @@ def test_day1_sol1():
 def test_day1_sol2():
     solution = d1s2(test_files["day1p2"])
     assert solution == 281
+
+
+# Day 2
+
+from day2.solution1 import main as d2s1
+from day2.solution2 import main as d2s2
+
+def test_day2_sol1():
+    solution = d2s1(test_files["day2"])
+    assert solution == 8
+
+def test_day2_sol2():
+    solution = d2s2(test_files["day2"])
+    assert solution == 2286
