@@ -1,6 +1,3 @@
-import re
-
-
 def main(path: str) -> int:
     """
     Day 2 solution to part 1

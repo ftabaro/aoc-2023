@@ -6,8 +6,6 @@ def main(path: str) -> int:
     Day 2 solution to part 1
     """
 
-    games = []
-
     tot = 0
 
     with open(path, encoding="utf-8") as file_handler:
