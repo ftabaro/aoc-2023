@@ -3,7 +3,7 @@ import re
 
 def main(path: str) -> int:
     """
-    Day 4 solution to part 1
+    Day 4 solution to part 2
     """
     pat = re.compile(
         r"^Card\s+(?P<card_id>\d+):(?P<winning_numbers>[\d\s]+)\|(?P<card_numbers>[\s\d]+)$"
