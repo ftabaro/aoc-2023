@@ -1,10 +1,13 @@
 import re
 
+
 def main(path: str) -> int:
     """
     Day 4 solution to part 1
     """
-    pat = re.compile(r"^Card\s+[0-9]+:(?P<winning_numbers>[\d\s]+)\|(?P<card_numbers>[\s\d]+)$")
+    pat = re.compile(
+        r"^Card\s+[0-9]+:(?P<winning_numbers>[\d\s]+)\|(?P<card_numbers>[\s\d]+)$"
+    )
     tot = 0
     with open(path, encoding="utf-8") as file_handler:
         for line in file_handler:
@@ -13,9 +16,11 @@ def main(path: str) -> int:
             match = re.match(pat, line)
             if match is not None:
                 m = match.groupdict()
-                
-                winning_numbers = [ int(x) for x in re.findall(r"\d+", m["winning_numbers"]) ]
-                my_numbers = [ int(x) for x in re.findall(r"\d+", m["card_numbers"]) ]
+
+                winning_numbers = [
+                    int(x) for x in re.findall(r"\d+", m["winning_numbers"])
+                ]
+                my_numbers = [int(x) for x in re.findall(r"\d+", m["card_numbers"])]
 
                 card_score = 0
                 for n in my_numbers:
