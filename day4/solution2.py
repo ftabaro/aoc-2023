@@ -38,7 +38,7 @@ def main(path: str) -> int:
                             card_copies[next_card] += 1
                             next_card = next_card + 1
 
-    tot = sum(list(card_copies.values()))
+    tot = sum(card_copies.values())
     return tot
 
 
