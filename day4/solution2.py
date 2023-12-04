@@ -25,12 +25,11 @@ def main(path: str) -> int:
                 my_numbers = [int(x) for x in re.findall(r"\d+", m["card_numbers"])]
 
                 if card_id not in card_copies:
-                    card_copies[card_id] = copies = 1
+                    card_copies[card_id] = 1
                 else:
                     card_copies[card_id] += 1
-                    copies = card_copies[card_id]
 
-                for i in range(copies, 0, -1):
+                for i in range(card_copies[card_id], 0, -1):
                     next_card = card_id + 1
                     for n in my_numbers:
                         if n in winning_numbers:
