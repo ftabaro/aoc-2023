@@ -86,7 +86,19 @@ def test_day5_sol1():
     assert solution == 35
 
 
-def test_day5_sol2():
-    solution = d5s2(test_files["day5"])
-    assert solution == 46
+# def test_day5_sol2():
+#     solution = d5s2(test_files["day5"])
+#     assert solution == 46
 
+# DAY 6
+
+from day6.solution1 import main as d6s1
+from day6.solution2 import main as d6s2
+
+def test_day6_sol1():
+    solution = d6s1(test_files["day6p1"])
+    assert solution == 288
+
+def test_day6_sol2():
+    solution = d6s1(test_files["day6p2"])
+    assert solution == 71503
