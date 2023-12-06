@@ -73,3 +73,20 @@ def test_day4_sol1():
 def test_day4_sol2():
     solution = d4s2(test_files["day4"])
     assert solution == 30
+
+
+# DAY 5
+
+from day5.solution1 import main as d5s1
+from day5.solution2 import main as d5s2
+
+
+def test_day5_sol1():
+    solution = d5s1(test_files["day5"])
+    assert solution == 35
+
+
+def test_day5_sol2():
+    solution = d5s2(test_files["day5"])
+    assert solution == 46
+
