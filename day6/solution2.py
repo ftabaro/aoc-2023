@@ -11,7 +11,7 @@ def solve(time: int, distance: int) -> int:
 
 def main(path: str) -> int:
     """
-    Day 6 solution to part 1
+    Day 6 solution to part 2
     """
 
     with open(path, encoding="utf-8") as file_handler:
