@@ -103,5 +103,5 @@ def test_day6_sol1():
 
 
 def test_day6_sol2():
-    solution = d6s1(test_files["day6p2"])
+    solution = d6s2(test_files["day6p2"])
     assert solution == 71503
