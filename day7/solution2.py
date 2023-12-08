@@ -22,7 +22,7 @@ def get_count(hand: str) -> list[int]:
 
 def main(path: str) -> int:
     """
-    Day 7 solution to part 1
+    Day 7 solution to part 2
     """
 
     lines = [line.strip().split(" ") for line in open(path, encoding="utf-8")]
