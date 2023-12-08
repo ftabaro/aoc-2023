@@ -5,6 +5,7 @@ from re import T
 def val(c: str) -> int:
     return "J23456789TQKA".index(c)
 
+
 def get_count(hand: str) -> list[int]:
     if "J" in hand:
         counts = []
@@ -17,6 +18,7 @@ def get_count(hand: str) -> list[int]:
         count = Counter(hand)
         ret = sorted(count.values(), reverse=True)
     return ret
+
 
 def main(path: str) -> int:
     """
@@ -31,7 +33,7 @@ def main(path: str) -> int:
         line += [val(char) for char in line[0]]
 
     lines = sorted(lines, key=lambda x: x[2:])
-    
+
     return sum([line[1] * (i + 1) for i, line in enumerate(lines)])
 
 

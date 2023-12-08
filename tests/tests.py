@@ -117,6 +117,7 @@ def test_day7_sol1():
     solution = d7s1(test_files["day7"])
     assert solution == 6440
 
+
 def test_day7_sol2():
     solution = d7s2(test_files["day7"])
     assert solution == 5905
