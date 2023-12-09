@@ -142,3 +142,19 @@ def test_day8_sol1b():
 def test_day8_sol2():
     solution = d8s2(test_files["day8p2"])
     assert solution == 6
+
+
+# DAY 9
+
+from day9.solution1 import main as d9s1
+from day9.solution2 import main as d9s2
+
+
+def test_day9_sol1():
+    solution = d9s1(test_files["day9"])
+    assert solution == 114
+
+
+def test_day9_sol2():
+    solution = d9s2(test_files["day9"])
+    assert solution == 2
