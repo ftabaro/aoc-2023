@@ -1,4 +1,13 @@
-from itertools import pairwise
+import sys
+
+if sys.version_info.major == 3 and sys.version_info.minor < 10:
+    from typing import Generator
+
+    def pairwise(values: list[int]) -> Generator:
+        return zip(values[:-1], values[1:])
+
+else:
+    from itertools import pairwise
 
 
 def diff(series: list[int]) -> list[int]:
