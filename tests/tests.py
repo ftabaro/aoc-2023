@@ -130,12 +130,12 @@ from day8.solution2 import main as d8s2
 
 
 def test_day8_sol1a():
-    solution = d8s1(test_files["day8a"])
+    solution = d8s1(test_files["day8p1a"])
     assert solution == 2
 
 
 def test_day8_sol1b():
-    solution = d8s1(test_files["day8b"])
+    solution = d8s1(test_files["day8p1b"])
     assert solution == 6
 
 
@@ -158,3 +158,49 @@ def test_day9_sol1():
 def test_day9_sol2():
     solution = d9s2(test_files["day9"])
     assert solution == 2
+
+
+# DAY 10
+
+from day10.solution1 import main as d10s1
+from day10.solution2 import main as d10s2
+
+
+def test_day10_sol1a():
+    solution = d10s1(test_files["day10p1a"])
+    assert solution == 4
+
+
+def test_day10_sol1b():
+    solution = d10s1(test_files["day10p1b"])
+    assert solution == 8
+
+
+def test_day10_sol1c():
+    solution = d10s1(test_files["day10p1c"])
+    assert solution == 4
+
+
+def test_day10_sol1d():
+    solution = d10s1(test_files["day10p1d"])
+    assert solution == 8
+
+
+def test_day10_sol2a():
+    solution = d10s2(test_files["day10p2a"])
+    assert solution == 4
+
+
+def test_day10_sol2b():
+    solution = d10s2(test_files["day10p2b"])
+    assert solution == 8
+
+
+def test_day10_sol2c():
+    solution = d10s2(test_files["day10p2c"])
+    assert solution == 10
+
+
+def test_day10_sol2d():
+    solution = d10s2(test_files["day10p2d"])
+    assert solution == 4
