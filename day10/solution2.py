@@ -22,27 +22,6 @@ directions = {
 }
 
 
-def get_neighbors(
-    m: list[list[str]], r: int, c: int, d: int, visited: set[tuple[int, int]] = set()
-) -> list[tuple[int, int]]:
-    neighbors = set()
-
-    n = m[r][c]
-
-    allowed_directions = directions[n]
-
-    for i, j in allowed_directions:
-        rr = r + i
-        cc = c + j
-        if 0 <= rr < len(m) and 0 <= cc < len(m[0]):
-            nn = m[rr][cc]
-            if (not (rr, cc) in visited) and (nn in allowed_symbols[(i, j)]):
-                neighbors.add((rr, cc, d + 1))
-                visited.add((rr, cc))
-
-    return neighbors, visited
-
-
 def dfs(
     m: list[list[str]],
     r: int,
@@ -82,7 +61,8 @@ def get_start(_map: str) -> tuple[int, int]:
 
 
 def shoelace(x, y):
-    """Calculates the area of an arbitrary polygon given its verticies"""
+    """Calculates the area of an arbitrary polygon given its verticies.
+    https://en.wikipedia.org/wiki/Shoelace_formula"""
     area = 0.0
     for i in range(len(x)):
         ii = (i + 1) % len(x)
@@ -106,6 +86,7 @@ def main(path: str) -> int:
 
     a = shoelace(x, y)
 
+    # https://en.wikipedia.org/wiki/Pick%27s_theorem
     return math.ceil(a - (len(corners) / 2) + 1)
 
 
