@@ -204,3 +204,29 @@ def test_day10_sol2c():
 def test_day10_sol2d():
     solution = d10s2(test_files["day10p2d"])
     assert solution == 4
+
+
+# DAY 11
+
+from day11.solution1 import main as d11s1
+from day11.solution2 import main as d11s2
+
+
+def test_day11_sol1():
+    solution = d11s1(test_files["day11"])
+    assert solution == 374
+
+
+def test_day11_sol2c():
+    solution = d11s2(test_files["day11"], 1)
+    assert solution == 374
+
+
+def test_day11_sol2a():
+    solution = d11s2(test_files["day11"], 10)
+    assert solution == 1030
+
+
+def test_day11_sol2b():
+    solution = d11s2(test_files["day11"], 100)
+    assert solution == 8410
