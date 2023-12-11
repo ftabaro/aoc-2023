@@ -18,8 +18,8 @@ directions = {
 
 
 def get_neighbors(
-    m: list[list[str]], r: int, c: int, d: int, visited: set[tuple[int, int]] = set()
-) -> list[tuple[int, int]]:
+    m: list[str], r: int, c: int, d: int, visited: set[tuple[int, int]] = set()
+) -> tuple[set[tuple[int, int, int]], set[tuple[int, int]]]:
     neighbors = set()
 
     n = m[r][c]
@@ -37,17 +37,17 @@ def get_neighbors(
     return neighbors, visited
 
 
-def get_start(_map: str) -> tuple[int, int]:
+def get_start(_map: str) -> tuple[list[str], int, int]:
     start = _map.index("S")
     newlines = _map[:start].count("\n")
     start -= newlines
 
-    _map = _map.splitlines()
-    ncols = len(_map[0])
+    m = _map.splitlines()
+    ncols = len(m[0])
 
     (r, c) = divmod(start, ncols)
 
-    return _map, r, c
+    return m, r, c
 
 
 def main(path: str) -> int:
