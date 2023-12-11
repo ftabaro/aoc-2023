@@ -23,7 +23,7 @@ directions = {
 
 
 def dfs(
-    m: list[list[str]],
+    m: list[str],
     r: int,
     c: int,
     visited: set[tuple[int, int]] = set(),
@@ -47,17 +47,17 @@ def dfs(
     return corners
 
 
-def get_start(_map: str) -> tuple[int, int]:
+def get_start(_map: str) -> tuple[list[str], int, int]:
     start = _map.index("S")
     newlines = _map[:start].count("\n")
     start -= newlines
 
-    _map = _map.splitlines()
-    ncols = len(_map[0])
+    m = _map.splitlines()
+    ncols = len(m[0])
 
     (r, c) = divmod(start, ncols)
 
-    return _map, r, c
+    return m, r, c
 
 
 def shoelace(x, y):
